@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <link rel="stylesheet" href="index.js">
+  <link rel="stylesheet" href="contact.html">
+</head>
+
+<body>
+ 
+  <header>
+    <a href="index.html" class="logo"> Benita's World </a>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Achievements</a></li>
+      <li id="goals"><a href="goals.html">2023 Goals</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="#">Explore</a></li>
+
+    </ul>
+  </header>
+  <div class="container">
+    <section class="one">
+      <img src="stars.png" id="stars">
+      <img id="moon" src="moon.png" id="moon">
+      <img src="mountains_behind.png" id="mountains_behind">
+      <h2 id="text">Benita's World</h2>
+      <a href="#sec" id="btn">Explore my World!</a>
+      <img src="mountains_front.png" id="mountains_front">
+    </section>
+    <div class="sec" id="sec">
+      <section class="two">
+        <h2>A little about myself</h2>
+        <p>
+          <img src="Author_pic.jpg" alt="Benita">
+          <br>
+          Hi, I'm Benita. A 3rd year Chemical Engineering student and an aspiring blockchain developer with a flare for
+          solving problems(no seriously, it's like a hobby at this point&#129315).
+          My main interest apart from trying to solve problems with code is reading about the various innovations in the
+          web3 and blockchain space.
+          I'm also a big fan of the hollywood cinema (if this coding thing doesn't work out, I'll be a director). I'm
+          still really new to the field of blockchain though but with hardwork and diligence
+          I believe by the end of 2023 I would have covered substantial ground(HTML, CSS, JavaScript, Golang, C++ and
+          Solidity).
+          Now let me leave you to explore the rest of my world &#128640
+
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis maximus,
+          dui in tristique tincidunt, nisi nisi luctus est, a condimentum arcu turpis id turpis.
+          <br> Ut quis orci sed massa fringilla placerat. Morbi posuere leo velit, id fringilla velit ornare non.
+          Nam auctor quam nec magna placerat, et aliquam erat dapibus. <br> Praesent auctor diam non neque tempus, at
+          fermentum mauris iaculis.
+          Nam venenatis, nulla in tincidunt ultricies, ligula diam consectetur nulla, id tincidunt orci quam ut enim. In
+          non est tincidunt,
+          tincidunt lacus id, finibus dui.
+        </p>
+      </section>
+      <section class="three">
+        <h1>Third Page</h1>
+      </section>
+      <section class="four">
+        <h1>Fourth Page</h1>
+      </section>
+    </div>
+  </div>
+  <script>
+    let stars = document.getElementById('stars');
+    let moon = document.getElementById('moon');
+    let mountains_behind = document.getElementById('mountains_behind');
+    let text = document.getElementById('text');
+    let btn = document.getElementById('btn');
+    let mountains_front = document.getElementById('mountains_front');
+    let header = document.querySelector('header');
+
+    window.addEventListener('scroll', function () {
+      let value = window.scrollY;
+      stars.style.left = value * 0.25 + 'px';
+      moon.style.top = value * 1.05 + 'px';
+      mountains_behind.style.top = value * 0.5 + 'px';
+      mountains_front.style.top = value * 0 + 'px';
+      text.style.marginRight = value * 4 + 'px';
+      text.style.marginTop = value * 1.5 + 'px';
+      btn.style.marginTop = value * 1.5 + 'px';
+      header.style.top = value * 0.5 + 'px';
+    })
+  </script>
+
+
+
+</body>
+
+</html>
